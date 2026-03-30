@@ -32,7 +32,7 @@ The network is built upon a **ResNet-50** backbone, enhanced with four strategic
 4.  **IIM (Identification Improvement Module):** A final refinement stage that sharpens the edges and ensures structural integrity.
 5.  **JDM (Joint Decision Module):** The output layer that generates the final $352 \times 352$ binary segmentation mask.
 
-![DSNet-Enhanced Architecture](assets/architecture_diagram.png)
+![DSNet-Enhanced Architecture](CBAM_Enhanced/assets/architecture_diagram.png)
 
 ---
 
@@ -54,7 +54,7 @@ loss = (weighted_bce + weighted_iou).mean()
 ## 📊 Visual Results & Heatmaps
 
 The model demonstrates a clear progression of feature refinement. By visualizing the intermediate layers, we can see the transition from high-level semantics to precise boundaries:
-![Feature Refinement](assets/image-4.png)
+![Feature Refinement](CBAM_Enhanced/assets/image-4.png)
 ---
 ### 🚀 Getting Started
 
@@ -201,7 +201,7 @@ Despite the lower metrics, the model still successfully captures the **"structur
 
 | Input Image | Ground Truth | DSNet Prediction |
 | :---: | :---: | :---: |
-| ![CAMO Input](assets/image-11.png) | ![CAMO GT](assets/image-12.png) | ![CAMO Prediction](assets/image-13.png) |
+| ![CAMO Input](CBAM_Enhanced/assets/image-11.png) | ![CAMO GT](CBAM_Enhanced/assets/image-12.png) | ![CAMO Prediction](CBAM_Enhanced/assets/image-13.png) |
 
 *Figure: Qualitative performance on CAMO. Notice that while the global localization is accurate, the boundary refinement faces challenges due to environmental luminance variance.*
 
@@ -229,12 +229,12 @@ To verify the contribution of each proposed component, we conducted an ablation 
 ### 4. Visual Inference (Qualitative Results)
 The model demonstrates high-fidelity boundary detection across various species:
 
-![Result 1](assets/image-5.png)
-![Result 2](assets/image-6.png)
-![Result 3](assets/image-7.png)
-![Result 4](assets/image-8.png)
-![Result 5](assets/image-9.png)
-![Result 6](assets/image-10.png)
+![Result 1](CBAM_Enhanced/assets/image-5.png)
+![Result 2](CBAM_Enhanced/assets/image-6.png)
+![Result 3](CBAM_Enhanced/assets/image-7.png)
+![Result 4](CBAM_Enhanced/assets/image-8.png)
+![Result 5](CBAM_Enhanced/assets/image-9.png)
+![Result 6](CBAM_Enhanced/assets/image-10.png)
 
 *Figure: Qualitative comparison between the Original Image, the Binary Ground Truth, and the DSNet-Enhanced Prediction.*
 
